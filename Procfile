@@ -1,1 +1,1 @@
-web: TELEPORT_PROXY=https://asteroid-sun.teleport.sh:443 node ./app.js
+web: node ./app.js
