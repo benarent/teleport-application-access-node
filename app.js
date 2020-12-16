@@ -17,7 +17,7 @@ const isInsecure =
     ? true
     : false;
 
-let proxyAddr = process.env.TELEPORT_PROXY || "https://teleport.cluster.local:3080";
+let proxyAddr = process.env.TELEPORT_PROXY || "https://asteroid-sun.teleport.sh:443";
 
 if (!proxyAddr.match(/(http|https):\/\//)) {
   proxyAddr = "https://" + proxyAddr;
