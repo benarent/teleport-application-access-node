@@ -7,18 +7,16 @@ show the Teleport roles available to the application.
 
 Prerequisites
 - A Teleport Cluster running 5.1.0 or greater.
-- Node.js local environment or quickly deploy this template to Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+- Node.js local environment or quickly [use this template](https://github.com/benarent/teleport-application-access-node/generate) and [deploy to Heroku](https://heroku.com/deploy)
 
 Configuring the App:
-- Set `TELEPORT_PROXY`
+- Update .env `TELEPORT_PROXY` with the public address of your Teleport Cluster
 
-Run it:
+Run it locally:
 
 ```bash
 npm install
 TELEPORT_PROXY=example.teleport.sh:443 node ./app.js
 ```
 
-Other:
-For testing purposes, if you have a self-signed certificate you could also pass
-`TELEPORT_INSECURE=true` environment variable
+Run it on Heroku:
