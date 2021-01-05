@@ -24,6 +24,8 @@ if (!proxyAddr.match(/(http|https):\/\//)) {
 }
 
 const app = express();
+app.use(express.static(__dirname + '/public'));
+
 const jwks = jwksClient({
   strictSsl: !isInsecure,
   cache: true, // Public key must be memoized.
@@ -64,13 +66,14 @@ app.get("/", function (req, res) {
   res.send(
     ejs.render(
       `
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <p>Hello <b><%= username %></b>!</p>
-   <p>You know the roles and so do I:
-   <ul>
-     <% roles.forEach(role => { %>
-       <li><%= role %></li>
-     <% }); %>
-   </ul>
+    <p>You know the roles and so do I:
+    <ul>
+      <% roles.forEach(role => { %>
+        <li><%= role %></li>
+      <% }); %>
+    </ul>
 `,
       { username: username, roles: roles }
     )
