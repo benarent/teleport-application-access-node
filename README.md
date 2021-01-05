@@ -23,7 +23,7 @@ TELEPORT_PROXY=example.teleport.sh:443 node ./app.js
 ```
 
 ### Step 2:
-Install Teleport locally, in this setup Teleport will dial back to Teleport Cloud.
+[Install Teleport](https://goteleport.com/teleport/docs/installation/) locally, in this setup Teleport will dial back to Teleport Cloud.
 
 Start Teleport:
 ```bash
