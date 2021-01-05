@@ -52,4 +52,4 @@ teleport start --roles=app --auth-server=example.teleport.sh:443 \
         - name: "jwt-quickstart"
             uri: "https://_heroku-app-name_.herokuapp.com"
         ```
-    - Teleport Cloud users can ... (How to Proxy with Heroku using Teleport Cloud...)
+    - Teleport Cloud users can ... (How to Proxy with Heroku using Teleport Cloud...maybe needs a custom buildpack)
