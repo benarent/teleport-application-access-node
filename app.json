@@ -1,0 +1,7 @@
+{
+    "name": "Teleport Application Access JWT Example App",
+    "description": "A barebones Teleport Application Access example Node.hs Express app",
+    "repository": "https://github.com/benarent/teleport-application-access-node",
+    "logo": "https://p197.p4.n0.cdn.getcloudapp.com/items/Wnul80Ag/e1223ceb-138a-4904-9452-b716d56a92cc.png",
+    "keywords": ["node", "express", "teleport", "jwt"]
+  }
