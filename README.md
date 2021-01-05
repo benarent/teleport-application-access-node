@@ -3,6 +3,9 @@
 This is an example of Node.js application that restricts access using a Teleport
 Application Access feature. This example app requires Teleport Version 5.0.3 or greater.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+
 Run it:
 
 ```bash
