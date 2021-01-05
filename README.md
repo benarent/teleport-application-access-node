@@ -22,8 +22,7 @@ npm install
 TELEPORT_PROXY=example.teleport.sh:443 node ./app.js
 ```
 
-### Step 2:
-[Install Teleport](https://goteleport.com/teleport/docs/installation/) locally, in this setup Teleport will dial back to Teleport Cloud.
+2. [Install Teleport](https://goteleport.com/teleport/docs/installation/) locally, in this setup Teleport will dial back to Teleport Cloud.
 
 Start Teleport:
 ```bash
@@ -43,7 +42,7 @@ app_service:
     uri: "http://localhost:8080"
 ```
 
-### Run it on Heroku:
+### Run this app on Heroku:
 
 1. Clone with [Github Template](https://github.com/benarent/teleport-application-access-node/generate)
 2. Update .env `TELEPORT_PROXY` with the public address and port of your Teleport Cluster
