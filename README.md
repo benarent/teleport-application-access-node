@@ -7,16 +7,46 @@ show the Teleport roles available to the application.
 
 Prerequisites
 - A Teleport Cluster running 5.1.0 or greater.
-- Node.js local environment or quickly [use this template](https://github.com/benarent/teleport-application-access-node/generate) and [deploy to Heroku](https://heroku.com/deploy)
+    - Teleport Cloud [Signup](https://goteleport.com/get-started/)
+    - Teleport self-hosted [quickstart](https://goteleport.com/teleport/docs/quickstart/)
+- Node.js local environment with Teleport running locally _or_ quickly [use this template](https://github.com/benarent/teleport-application-access-node/generate) and [deploy to Heroku](https://heroku.com/deploy)
 
-Configuring the App:
-- Update .env `TELEPORT_PROXY` with the public address of your Teleport Cluster
+### Configuring the App:
+- Update .env `TELEPORT_PROXY` with the public address and port of your Teleport Cluster
 
-Run it locally:
+### Run it locally:
 
+1. Clone this repo, install and run the app.
 ```bash
 npm install
 TELEPORT_PROXY=example.teleport.sh:443 node ./app.js
 ```
 
-Run it on Heroku:
+### Step 2:
+Install Teleport locally, in this setup Teleport will dial back to Teleport Cloud.
+
+Start Teleport:
+```bash
+# Update --auth-server to your Teleport Cloud account
+teleport start --roles=app --auth-server=example.teleport.sh:443 \
+    --app-name="jwt-quickstart" \
+    --app-uri="http://localhost:8080"
+```
+```yaml
+# Snippet if using teleport.yaml
+#...
+app_service:
+  enabled: yes
+  debug_app: yes
+  apps:
+  - name: "jwt-quickstart"
+    uri: "http://localhost:8080"
+```
+
+### Run it on Heroku:
+
+1. Clone with [Github Template](https://github.com/benarent/teleport-application-access-node/generate)
+2. Update .env `TELEPORT_PROXY` with the public address and port of your Teleport Cluster
+3. Deploy to Heroku. Quickly Deploy using
+    - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+4. ? (How to Proxy with Heroku...)
