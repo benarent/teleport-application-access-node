@@ -1,17 +1,24 @@
-# Node.js example application
+# Teleport Application Access Node.js JWT Example App
 
-This is an example of Node.js application that restricts access using a Teleport
-Application Access feature. This example app requires Teleport Version 5.0.3 or greater.
+Teleport can be used to secure access to internal dashboards and applications. This
+sample application provides automatic access using JSON Web Tokens (JWTs). This
+application restricts access to a specific Teleport Proxy. Once logged in, it'll
+show the Teleport roles available to the application.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Prerequisites
+- A Teleport Cluster running 5.1.0 or greater.
+- Node.js local environment or quickly deploy this template to Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+Configuring the App:
+- Set `TELEPORT_PROXY`
 
 Run it:
 
 ```bash
 npm install
-TELEPORT_PROXY=asteroid-sun.teleport.sh:443 node ./app.js
+TELEPORT_PROXY=example.teleport.sh:443 node ./app.js
 ```
 
+Other:
 For testing purposes, if you have a self-signed certificate you could also pass
 `TELEPORT_INSECURE=true` environment variable

@@ -1,1 +1,1 @@
-web: TELEPORT_PROXY=teleport.asteroid.earth:3080 node ./app.js
+web: node ./app.js
