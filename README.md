@@ -32,7 +32,6 @@ teleport start --roles=app --auth-server=example.teleport.sh:443 \
     --app-uri="http://localhost:8080"
 ```
 
-
 ### Run this app on Heroku:
 
 1. Clone with [Github Template](https://github.com/benarent/teleport-application-access-node/generate)
@@ -46,10 +45,10 @@ teleport start --roles=app --auth-server=example.teleport.sh:443 \
         # Snippet if using teleport.yaml
         #...
         app_service:
-        enabled: yes
-        debug_app: yes
-        apps:
-        - name: "jwt-quickstart"
-            uri: "https://_heroku-app-name_.herokuapp.com"
+            enabled: yes
+            debug_app: yes
+            apps:
+            - name: "jwt-quickstart"
+                uri: "https://_heroku-app-name_.herokuapp.com"
         ```
     - Teleport Cloud users can ... (How to Proxy with Heroku using Teleport Cloud...maybe needs a custom buildpack)
