@@ -52,5 +52,5 @@ teleport start --roles=app --auth-server=example.teleport.sh:443 \
             - name: "jwt-quickstart"
               uri: "https://_heroku-app-name_.herokuapp.com"
         ```
-    - Teleport Cloud users can add a build pack
+    - Teleport Cloud users can add a build pack.
     `heroku buildpacks:set https://github.com/benarent/heroku-buildpack-teleport.git -a [HEROKU-APP-NAME`
