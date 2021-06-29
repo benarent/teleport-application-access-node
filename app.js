@@ -69,7 +69,7 @@ app.get("/", function (req, res) {
     ejs.render(
       `
     <p>Hello <b><%= username %></b>!</p>
-   <p>You are now logged in and have these roles.17
+   <p>You are now logged in and have these roles.18
    <ul>
      <% roles.forEach(role => { %>
        <li><%= role %></li>
